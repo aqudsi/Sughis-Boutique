@@ -5,7 +5,6 @@ const apiRoutes = require("./api-routes");
 // API Routes
 router.use("/api", apiRoutes);
 //HTML Routes
-router.use("/", htmlRoutes)
 
 
 // If no API routes are hit, send the React app

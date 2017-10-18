@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const APIroutes = require("./routes/index.js");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -23,11 +24,13 @@ passport.deserializeUser(Account.deserializeUser());
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Serve up static assets
-app.use(express.static("/routes"))
-// Add routes, both API and view
-app.use(routes);
-
+app.use(express.static("public"));
+// Add routes, both API and HTML
+app.use(APIroutes);
+require("./routes/html-routes/html-routes.js")(app)
 
 
 // Set up promises with mongoose
