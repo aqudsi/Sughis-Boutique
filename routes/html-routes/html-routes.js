@@ -21,6 +21,7 @@ module.exports = function(app) {
 		res.sendFile(path.join(__dirname, "../../public/pages/main_page/contact.html"))
 	});	
 
+
 	//men's collection page, with all men's styles
 	app.get("/mens_collection", function(req, res) {
 		res.sendFile(path.join(__dirname, "../../public/pages/mens_collection/mens_collection.html"))
@@ -34,9 +35,7 @@ module.exports = function(app) {
 	app.get("/mens_collection/mens_wedding_wear", function(req, res) {
 		res.sendFile(path.join(__dirname, "../../public/pages/mens_collection/mens_wedding_wear.html"))
 	});
-	app.get("/mens_collection/mens_clearance", function(req, res) {
-		res.sendFile(path.join(__dirname, "../../public/pages/sale_collection/mens_clearance.html"))
-	});
+	
 
 	//women's collection page, with all women's styles	
 	app.get("/womens_collection", function(req, res) {
@@ -54,16 +53,21 @@ module.exports = function(app) {
 	app.get("/womens_collection/womens_wedding_wear", function(req, res) {
 		res.sendFile(path.join(__dirname, "../../public/pages/womens_collection/womens_wedding_wear.html"))
 	});
-	app.get("/womens_collection/womens_clearance", function(req, res) {
-		res.sendFile(path.join(__dirname, "../../public/pages/sale_collection/womens_clearance.html"))
-	});
 
 
 	//sale page, with all items on sale
 	app.get("/sale_collection", function(req, res) {
-		res.sendFile(path.join(__dirname, "../../public/pages/sale_collection.html"))
+		res.sendFile(path.join(__dirname, "../../public/pages/sale_collection/sale_collection.html"))
 	});		
+	app.get("/womens_collection/womens_clearance", function(req, res) {
+		res.sendFile(path.join(__dirname, "../../public/pages/sale_collection/womens_clearance.html"))
+	});
+	app.get("/mens_collection/mens_clearance", function(req, res) {
+		res.sendFile(path.join(__dirname, "../../public/pages/sale_collection/mens_clearance.html"))
+	});
 
+
+	//admin pages, with admin login and portal page
 	app.get("/admin_login", function(req, res) {
 		res.sendFile(path.join(__dirname, "../../public/pages/admin_page/admin_login.html"))
 	});
