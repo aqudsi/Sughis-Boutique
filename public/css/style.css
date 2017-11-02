@@ -23,6 +23,13 @@ body {
     }
 }
 
+@media (min-width: 1002px) {
+	.confirm_shipping {
+		margin-right:-16px;
+	}
+}
+
+
 @media screen and (max-width: 1000px) {
 	.logo {
 		height:200px;
@@ -31,10 +38,13 @@ body {
 	footer {
 		height: 30px;
 		bottom:0;
-		margin-top:60px;
+		margin-top:30px;
 	}
 	.filter {
 	padding-top:0px
+	}
+	.confirm_shipping {
+	margin-right: 15px
 }
 }
 
@@ -96,11 +106,19 @@ a.navbar{
     color:white;
     text-align: left;
     vertical-align: bottom;
+}
+.cart {
+	font-size:30px;
+	color:white;
+}
 
+.displayCart {
+	background-color:;
 }
 
 .submit {
 	color:white;
+	border: 0px;
 	margin-top:5px;
 }
 .submit:hover {
@@ -115,6 +133,12 @@ a.navbar{
 	height:auto;
     width: 100%;
 }
+.checkout {
+	padding: 25px;
+	height:auto;
+	width:100%;
+}
+
 
 .carousel-inner {
 	margin-bottom: 25px;
@@ -128,3 +152,6 @@ a.navbar{
    Negative indent footer by its height 
  
 }*/
+
+/*Flatly*/
+

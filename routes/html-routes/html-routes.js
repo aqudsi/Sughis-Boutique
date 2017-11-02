@@ -66,6 +66,14 @@ module.exports = function(app) {
 		res.sendFile(path.join(__dirname, "../../public/pages/sale_collection/mens_clearance.html"))
 	});
 
+	//cart and checkout pages
+	app.get("/my_cart", function(req, res) {
+		res.sendFile(path.join(__dirname, "../../public/pages/checkout/cart.html"))
+	});
+	app.get("/checkout", function(req, res) {
+		res.sendFile(path.join(__dirname, "../../public/pages/checkout/checkout.html"))
+	});
+
 
 	//admin pages, with admin login and portal page
 	app.get("/admin_login", function(req, res) {
